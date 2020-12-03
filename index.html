@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+  <main id='main' class="tittle">
+    <div class="tittle_img">
+      <img v-bind:src="img" v-bind:alt='alt'>
+    </div>
+    <nav class="tittle_palabras">
+      <p>{{ data }}</p>
+    </nav>
+  </main>
+  <section id='rigth' class="derecha">
+      <h1 class="derecha_titulo"> {{ title }} </h1>
+      <div class="separador"></div>
+      <h2 class="derecha_subtitulo">{{ subtitle }}</h2>
+      <div class="separador"></div>
+      <h3 class="derecha_comentario">{{ coment }}</h3>
+      <div class="separador"></div>
+      <div class="derecha_parrafo">
+        <p class="derecha_parrafo_author">{{ author }}</p>
+        <p class="derecha_parrafo_contenido">{{ paragraph }}</p>
+      </div>
+  </section>
+  <div id="principal" class="principal">
+      <img class="principal_image" v-bind:src='img' v-bind:alt="alt">
+      <h4 class="principal_titulo">{{ principalTitle }}</h4>
+      <p class="principal_parrafo">{{ principalParagraph }}</p>
+  </div>
+  <section id="center">
+    <article class="centro">
+        <h2 class="centro_tittle">{{ centerUP_title }}</h2>
+        <div class="centro_contenido">
+          <p class="centro_palabras">Lorem ipsum</p>
+          <p class="centro_parrafo">{{ centerUp_content }}</p>
+        </div>
+    </article>
+    <article class="abajo">
+        <h2 class="abajo_tittle">{{ centerDown_title }}</h2>
+        <div class="abajo_contenido">
+          <div class="abajo_contenido_parrafo">
+           
+            <p class="abajo_parrafo">{{ centerDown_content }}</p> 
+            <div  class="abajo_autor">
+              <h2>Lorem ipsum</h2>
+            </div>
+          </div>
+          <img class="abajo_image" v-bind:src="imgDown" v-bind:alt="altDown">
+        </div>
+  
+    </article>
+  </section>
+  <div class="publicidad">
+    <div></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="main.js"></script>
+  <script src="principal.js"></script>
+  <script src="rigth.js"></script>
+  <script src="center.js"></script>
+</body>
+</html>
